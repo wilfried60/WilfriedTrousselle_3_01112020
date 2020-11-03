@@ -1,0 +1,88 @@
+// ecran moyen
+@mixin sm {
+    @media (min-width: #{$ecran-moyen}) {
+        @content;
+    }
+ }
+  
+ // ecran large
+ @mixin md {
+    @media (min-width: #{$ecran-large}) {
+        @content;
+    }
+ }
+  
+ // ecran extra-large
+ @mixin lg {
+    @media (min-width: #{$ecran-extra-large}) {
+        @content;
+    }
+ }
+
+ 
+ // section localisation
+
+@mixin localisation-shadow ($couleur-shadow:$fond-localisation-home){
+    @if (lightness($couleur-shadow) < 25%){
+       $couleur-shadow : lighten($couleur-shadow, 15%);
+    }@else{
+        $couleur-shadow : darken($couleur-shadow, 15%);
+    }    
+    -webkit-box-shadow: inset 0px 10px 9px -10px $couleur-shadow; 
+    box-shadow: inset 0px 10px 9px -10px $couleur-shadow;
+}
+
+
+// configuration des boutons
+@mixin input-shadow ($input-shadow:$fond-conteneur-home){
+    @if (lightness($input-shadow) < 25%){
+       $input-shadow : lighten($input-shadow, 25%);
+    }@else{
+        $input-shadow : darken($input-shadow, 25%);
+    }    
+    -webkit-box-shadow:  0px 5px 12px -1px $input-shadow; 
+box-shadow: 0px 5px 12px -1px $input-shadow;
+}
+
+
+@mixin input-shadow-hover ($input-shadow:$fond-conteneur-home){
+    @if (lightness($input-shadow) < 25%){
+       $input-shadow : lighten($input-shadow, 55%);
+    }@else{
+        $input-shadow : darken($input-shadow, 75%);
+    }    
+    -webkit-box-shadow:  0px 5px 12px -1px $input-shadow; 
+box-shadow:  0px 5px 12px -1px $input-shadow;
+}
+
+@mixin transition-shadow-bouton{
+    transition: box-shadow 450ms, opacity 500ms;
+
+}
+
+@mixin background-bouton($background-bouton:$couleur-primaire){  
+  background: lighten($background-bouton, 35%);
+}
+
+
+
+
+// section flex 
+@mixin conteneur-flex-column{
+    flex-direction:column;
+    justify-content: center;
+}
+
+@mixin conteneur-flex-row{
+    flex-direction:row;
+}
+
+
+
+
+
+
+   
+
+
+    

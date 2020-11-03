@@ -1,0 +1,12 @@
+/* section header */ 
+
+header{
+    width: 100%;
+    height: 75px;
+    & h1{
+        font-weight: normal;
+        font-family: $font-family-titre;
+        text-align: center;
+    }
+}
+

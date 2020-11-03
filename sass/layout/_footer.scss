@@ -1,0 +1,40 @@
+
+/* footer */
+
+footer{
+    width: 100%;
+    height: auto;
+    background: $couleur-footer;
+    padding-bottom: 15px; 
+    color:  $couleur-text-footer;
+    
+    & h1{
+        font-size: 1.1em;
+        margin-left: -15px;
+        margin-top: 0;
+        font-weight: normal;
+    }
+
+    & ul li{
+        padding-top: 7px;
+    }
+
+    & ul li a{
+        margin-left: -15px;
+        color: $couleur-a-footer;
+        transition: color 600ms;
+    }
+
+    & ul li a:hover{
+        color: $couleur-text-footer;
+    }
+
+     & .fas{
+         padding-right: 5px;
+     }
+}
+
+.fa-hands-helping{
+    font-size: 0.7em;
+}
+
