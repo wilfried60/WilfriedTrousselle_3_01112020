@@ -1,0 +1,14 @@
+{
+  "name": "projet3-oh-my-good",
+  "version": "1.0.0",
+  "description": "\"créer un site de restauration\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.27.0"
+  }
+}
