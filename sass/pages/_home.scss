@@ -160,37 +160,7 @@
         }   
     }   
    
-    .fa-heart{
-        position: absolute;
-        font-size: 1.5em;
-        left: 84%;
-        cursor: pointer;
-        width: 30px;
-        margin-top: -15px;
-        color: $couleur-p-home;
-        transition: visibility 0s, opacity 0.5s linear;
-   }
-        .icon-checkbox input[type="checkbox"], .icon-checkbox .checked {
-            visibility: hidden;
-            opacity: 0;
-           
-        }
- 
-        .icon-checkbox input[type="checkbox"]:checked ~ .checked
-        {    
-            visibility: visible;
-            opacity: 1;
-            background: $coeur-home-hover;
-            background: $coeur-home-gradient-hover;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-  
-        }
- 
-        .icon-checkbox input[type="checkbox"]:checked ~ .unchecked{
-            visibility: hidden;
-            opacity: 0;
-        }
+    
 
        
 

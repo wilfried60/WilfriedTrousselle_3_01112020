@@ -49,7 +49,7 @@ box-shadow: 0px 5px 12px -1px $input-shadow;
     @if (lightness($input-shadow) < 25%){
        $input-shadow : lighten($input-shadow, 55%);
     }@else{
-        $input-shadow : darken($input-shadow, 75%);
+        $input-shadow : darken($input-shadow, 35%);
     }    
     -webkit-box-shadow:  0px 5px 12px -1px $input-shadow; 
 box-shadow:  0px 5px 12px -1px $input-shadow;
@@ -64,8 +64,29 @@ box-shadow:  0px 5px 12px -1px $input-shadow;
   background: lighten($background-bouton, 35%);
 }
 
+// animation bouton page menu
 
+@mixin bouton-menu{     
+    margin: auto;
+    margin-top: -10px;
+    width: 100%;
+    height: 71px;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    animation-fill-mode: forwards;
+    overflow:hidden;
+    cursor: pointer;
+    border: none;
+ }
 
+ @mixin bouton-menu-hover{     
+    margin-right: 0;
+ }
+
+ @mixin bouton-circle-hover{     
+    transform: rotate(360deg);
+ }
 
 // section flex 
 @mixin conteneur-flex-column{

@@ -70,3 +70,266 @@ input{
           
        }
  }
+
+ // selection du coeur 
+
+ .fa-heart{
+   position: absolute;
+   font-size: 1.5em;
+   left: 84%;
+   cursor: pointer;
+   width: 30px;
+   margin-top: -15px;
+   color: $couleur-p-home;
+   transition: visibility 0s, opacity 0.5s linear;
+}
+   .icon-checkbox input[type="checkbox"], .icon-checkbox .checked {
+       visibility: hidden;
+       opacity: 0;
+      
+   }
+
+   .icon-checkbox input[type="checkbox"]:checked ~ .checked
+   {    
+       visibility: visible;
+       opacity: 1;
+       background: $coeur-home-hover;
+       background: $coeur-home-gradient-hover;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+
+   }
+
+   .icon-checkbox input[type="checkbox"]:checked ~ .unchecked{
+       visibility: hidden;
+       opacity: 0;
+   }
+
+ // bouton des pages menu
+
+      .bouton-menu-1{
+         @include bouton-menu;
+         @include input-shadow;
+         animation: animation-menu 1500ms;
+
+         &:hover {
+           @include input-shadow-hover;
+              
+           } 
+      
+           &:hover .fa-check-circle{
+            @include bouton-circle-hover
+                
+             }
+
+             &:hover .icone-check{
+               @include bouton-menu-hover
+                   
+                }
+      }
+
+      .bouton-menu-2{
+         @include bouton-menu;
+         @include input-shadow;
+         animation: animation-menu 3000ms;
+
+         &:hover {
+            @include input-shadow-hover;
+               
+            } 
+       
+            &:hover .fa-check-circle{
+             @include bouton-circle-hover
+                 
+              }
+ 
+              &:hover .icone-check{
+                @include bouton-menu-hover
+                    
+                 }
+      }
+
+      .bouton-menu-3{
+         @include bouton-menu;
+         @include input-shadow;
+         animation: animation-menu 3500ms;
+
+         &:hover {
+            @include input-shadow-hover;
+               
+            } 
+       
+            &:hover .fa-check-circle{
+             @include bouton-circle-hover
+                 
+              }
+ 
+              &:hover .icone-check{
+                @include bouton-menu-hover
+                    
+                 }
+      }
+      .bouton-menu-4{
+
+         @include bouton-menu;
+         @include input-shadow;
+         animation: animation-menu 4000ms;
+
+         &:hover {
+            @include input-shadow-hover;
+               
+            } 
+       
+            &:hover .fa-check-circle{
+             @include bouton-circle-hover
+                 
+              }
+ 
+              &:hover .icone-check{
+                @include bouton-menu-hover
+                    
+                 }
+      }
+
+      .bouton-menu-5{
+         @include bouton-menu;
+         @include input-shadow;
+         animation: animation-menu 5500ms;
+
+         &:hover {
+            @include input-shadow-hover;
+               
+            } 
+       
+            &:hover .fa-check-circle{
+             @include bouton-circle-hover
+                 
+              }
+ 
+              &:hover .icone-check{
+                @include bouton-menu-hover
+                    
+                 }
+      }
+
+      .bouton-menu-6{
+         @include bouton-menu;
+         @include input-shadow;
+         animation: animation-menu 6000ms;
+
+         &:hover {
+            @include input-shadow-hover;
+               
+            } 
+       
+            &:hover .fa-check-circle{
+             @include bouton-circle-hover
+                 
+              }
+ 
+              &:hover .icone-check{
+                @include bouton-menu-hover
+                    
+                 }
+      }
+      .bouton-menu-7{
+
+         @include bouton-menu;
+         @include input-shadow;
+         animation: animation-menu 6500ms;
+
+         &:hover {
+            @include input-shadow-hover;
+               
+            } 
+       
+            &:hover .fa-check-circle{
+             @include bouton-circle-hover
+                 
+              }
+ 
+              &:hover .icone-check{
+                @include bouton-menu-hover
+                    
+                 }
+      }
+
+      .bouton-menu-8{
+         @include bouton-menu;
+         @include input-shadow;
+         animation: animation-menu 7000ms;
+
+         &:hover {
+            @include input-shadow-hover;
+               
+            } 
+       
+            &:hover .fa-check-circle{
+             @include bouton-circle-hover
+                 
+              }
+ 
+              &:hover .icone-check{
+                @include bouton-menu-hover
+                    
+                 }
+      }
+
+      .bouton-menu-9{
+         @include bouton-menu;
+         @include input-shadow;
+         animation: animation-menu 7500ms;
+
+         &:hover {
+            @include input-shadow-hover;
+               
+            } 
+       
+            &:hover .fa-check-circle{
+             @include bouton-circle-hover
+                 
+              }
+ 
+              &:hover .icone-check{
+                @include bouton-menu-hover
+                    
+                 }
+      }
+
+      @keyframes animation-menu {
+         from { opacity:0;
+            margin-top: 30px;
+                }
+         to { opacity:1;
+            margin-top: -10px;
+             }
+          }
+
+          .icone-check{
+            width: 60px;
+            height: 71px;
+            border-radius: 0 10px 10px 0;
+            background: $couleur-tertiaire;
+            float: right;
+            color: white;
+            transition:all 600ms ;
+            margin-right: -60px;
+            transition: margin-right 1s;
+
+           & .fa-check-circle{
+               margin-top:7px;
+               padding:19px;
+               background: transparent;
+               font-size: 1.3em;
+               transform: rotate(90deg);
+               transition: transform 1s;
+              
+            }
+
+          }
+
+        
+
+
+ 
+ 

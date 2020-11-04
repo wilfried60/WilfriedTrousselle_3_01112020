@@ -20,8 +20,8 @@ input {
 }
 input:hover {
   opacity: 0.8;
-  -webkit-box-shadow: 0px 5px 12px -1px #373737;
-  box-shadow: 0px 5px 12px -1px #373737;
+  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
+  box-shadow: 0px 5px 12px -1px #9d9d9d;
 }
 
 /* bouton fonctionnement */
@@ -63,6 +63,309 @@ input:hover {
 }
 .nav_fonctionnement li:hover .fa-mobile-alt, .nav_fonctionnement li:hover .fa-list, .nav_fonctionnement li:hover .fa-store {
   color: #9356DC;
+}
+
+.fa-heart {
+  position: absolute;
+  font-size: 1.5em;
+  left: 84%;
+  cursor: pointer;
+  width: 30px;
+  margin-top: -15px;
+  color: #747474;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.icon-checkbox input[type=checkbox], .icon-checkbox .checked {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.icon-checkbox input[type=checkbox]:checked ~ .checked {
+  visibility: visible;
+  opacity: 1;
+  background: rgba(255, 121, 218, 0.7);
+  background: linear-gradient(360deg, #ff79da 0%, #ff79da 0%, #9356dc 93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-checkbox input[type=checkbox]:checked ~ .unchecked {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.bouton-menu-1 {
+  margin: auto;
+  margin-top: -10px;
+  width: 100%;
+  height: 71px;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px -1px #b6b6b6;
+  box-shadow: 0px 5px 12px -1px #b6b6b6;
+  animation: animation-menu 1500ms;
+}
+.bouton-menu-1:hover {
+  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
+  box-shadow: 0px 5px 12px -1px #9d9d9d;
+}
+.bouton-menu-1:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.bouton-menu-1:hover .icone-check {
+  margin-right: 0;
+}
+
+.bouton-menu-2 {
+  margin: auto;
+  margin-top: -10px;
+  width: 100%;
+  height: 71px;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px -1px #b6b6b6;
+  box-shadow: 0px 5px 12px -1px #b6b6b6;
+  animation: animation-menu 3000ms;
+}
+.bouton-menu-2:hover {
+  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
+  box-shadow: 0px 5px 12px -1px #9d9d9d;
+}
+.bouton-menu-2:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.bouton-menu-2:hover .icone-check {
+  margin-right: 0;
+}
+
+.bouton-menu-3 {
+  margin: auto;
+  margin-top: -10px;
+  width: 100%;
+  height: 71px;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px -1px #b6b6b6;
+  box-shadow: 0px 5px 12px -1px #b6b6b6;
+  animation: animation-menu 3500ms;
+}
+.bouton-menu-3:hover {
+  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
+  box-shadow: 0px 5px 12px -1px #9d9d9d;
+}
+.bouton-menu-3:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.bouton-menu-3:hover .icone-check {
+  margin-right: 0;
+}
+
+.bouton-menu-4 {
+  margin: auto;
+  margin-top: -10px;
+  width: 100%;
+  height: 71px;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px -1px #b6b6b6;
+  box-shadow: 0px 5px 12px -1px #b6b6b6;
+  animation: animation-menu 4000ms;
+}
+.bouton-menu-4:hover {
+  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
+  box-shadow: 0px 5px 12px -1px #9d9d9d;
+}
+.bouton-menu-4:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.bouton-menu-4:hover .icone-check {
+  margin-right: 0;
+}
+
+.bouton-menu-5 {
+  margin: auto;
+  margin-top: -10px;
+  width: 100%;
+  height: 71px;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px -1px #b6b6b6;
+  box-shadow: 0px 5px 12px -1px #b6b6b6;
+  animation: animation-menu 5500ms;
+}
+.bouton-menu-5:hover {
+  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
+  box-shadow: 0px 5px 12px -1px #9d9d9d;
+}
+.bouton-menu-5:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.bouton-menu-5:hover .icone-check {
+  margin-right: 0;
+}
+
+.bouton-menu-6 {
+  margin: auto;
+  margin-top: -10px;
+  width: 100%;
+  height: 71px;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px -1px #b6b6b6;
+  box-shadow: 0px 5px 12px -1px #b6b6b6;
+  animation: animation-menu 6000ms;
+}
+.bouton-menu-6:hover {
+  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
+  box-shadow: 0px 5px 12px -1px #9d9d9d;
+}
+.bouton-menu-6:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.bouton-menu-6:hover .icone-check {
+  margin-right: 0;
+}
+
+.bouton-menu-7 {
+  margin: auto;
+  margin-top: -10px;
+  width: 100%;
+  height: 71px;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px -1px #b6b6b6;
+  box-shadow: 0px 5px 12px -1px #b6b6b6;
+  animation: animation-menu 6500ms;
+}
+.bouton-menu-7:hover {
+  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
+  box-shadow: 0px 5px 12px -1px #9d9d9d;
+}
+.bouton-menu-7:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.bouton-menu-7:hover .icone-check {
+  margin-right: 0;
+}
+
+.bouton-menu-8 {
+  margin: auto;
+  margin-top: -10px;
+  width: 100%;
+  height: 71px;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px -1px #b6b6b6;
+  box-shadow: 0px 5px 12px -1px #b6b6b6;
+  animation: animation-menu 7000ms;
+}
+.bouton-menu-8:hover {
+  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
+  box-shadow: 0px 5px 12px -1px #9d9d9d;
+}
+.bouton-menu-8:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.bouton-menu-8:hover .icone-check {
+  margin-right: 0;
+}
+
+.bouton-menu-9 {
+  margin: auto;
+  margin-top: -10px;
+  width: 100%;
+  height: 71px;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px -1px #b6b6b6;
+  box-shadow: 0px 5px 12px -1px #b6b6b6;
+  animation: animation-menu 7500ms;
+}
+.bouton-menu-9:hover {
+  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
+  box-shadow: 0px 5px 12px -1px #9d9d9d;
+}
+.bouton-menu-9:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.bouton-menu-9:hover .icone-check {
+  margin-right: 0;
+}
+
+@keyframes animation-menu {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  to {
+    opacity: 1;
+    margin-top: -10px;
+  }
+}
+.icone-check {
+  width: 60px;
+  height: 71px;
+  border-radius: 0 10px 10px 0;
+  background: #99E2D0;
+  float: right;
+  color: white;
+  transition: all 600ms;
+  margin-right: -60px;
+  transition: margin-right 1s;
+}
+.icone-check .fa-check-circle {
+  margin-top: 7px;
+  padding: 19px;
+  background: transparent;
+  font-size: 1.3em;
+  transform: rotate(90deg);
+  transition: transform 1s;
 }
 
 /* mise en place de la police d'écriture */
@@ -352,36 +655,6 @@ header h1 {
   font-weight: normal;
 }
 
-.fa-heart {
-  position: absolute;
-  font-size: 1.5em;
-  left: 84%;
-  cursor: pointer;
-  width: 30px;
-  margin-top: -15px;
-  color: #747474;
-  transition: visibility 0s, opacity 0.5s linear;
-}
-
-.icon-checkbox input[type=checkbox], .icon-checkbox .checked {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.icon-checkbox input[type=checkbox]:checked ~ .checked {
-  visibility: visible;
-  opacity: 1;
-  background: rgba(255, 121, 218, 0.7);
-  background: linear-gradient(360deg, #ff79da 0%, #ff79da 0%, #9356dc 93%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.icon-checkbox input[type=checkbox]:checked ~ .unchecked {
-  visibility: hidden;
-  opacity: 0;
-}
-
 /* pages des menus */
 /* photo du menu */
 .figure-menu {
@@ -409,7 +682,7 @@ header h1 {
   margin-top: -140px;
   z-index: 2;
   border-radius: 30px 30px 0 0;
-  padding: 20px;
+  padding: 15px;
 }
 .block_menu h2 {
   font-family: "Shrikhand", sans-serif;
@@ -417,16 +690,38 @@ header h1 {
   margin-top: 0;
   font-weight: normal;
 }
-.block_menu h3 {
-  margin-top: 0;
-  color: black;
-}
 .block_menu .fa-heart {
   margin-top: -45px;
 }
 .block_menu input {
-  padding-left: 35px;
-  padding-right: 35px;
+  margin: auto;
+  width: 150px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h3 {
+  color: #747474;
+}
+
+.block-titre {
+  overflow: hidden;
+  height: 30px;
+}
+
+hr {
+  width: 40px;
+  height: 3px;
+  font-size: 1.4em;
+  margin-left: 0;
+  margin-top: 4px;
+  border: none;
+  background: #99E2D0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
 }
 
 /* footer */
