@@ -1,6 +1,9 @@
 
 /* bouton explorer et commander*/
 input{
+   margin: auto;
+    max-width: 200px;
+    width: 100%;
     height: 40px;
     cursor: pointer;
     background-color: $input;
@@ -51,7 +54,16 @@ input{
          border-radius: 20px;
          @include input-shadow;
          transition: all 1000ms;
-        
+
+
+         @include large {
+            margin-right: 50px;
+            max-width: 260px;
+            width: 100%;
+            height: 60px;
+           display: inline-block;
+        }
+
          & .fa-mobile-alt, .fa-list, .fa-store {
             padding-top: 20px;
             color:$couleur-p-home;
@@ -70,40 +82,54 @@ input{
           
        }
  }
-
+ 
  // selection du coeur 
-
- .fa-heart{
-   position: absolute;
-   font-size: 1.5em;
-   left: 84%;
-   cursor: pointer;
-   width: 30px;
-   margin-top: -15px;
-   color: $couleur-p-home;
-   transition: visibility 0s, opacity 0.5s linear;
+ 
+ .icone-checkbox{
+   position: relative;
+   width: 90%;
+   text-align: right;
+   padding-right: 10px;
 }
-   .icon-checkbox input[type="checkbox"], .icon-checkbox .checked {
-       visibility: hidden;
-       opacity: 0;
-      
-   }
 
-   .icon-checkbox input[type="checkbox"]:checked ~ .checked
-   {    
-       visibility: visible;
-       opacity: 1;
-       background: $coeur-home-hover;
-       background: $coeur-home-gradient-hover;
-       -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
+.icone-checkbox-menu{
+   width: 90%;
+   text-align: right;
+   margin-top: -30px;
 
-   }
+   @include moyen {
+      width: 95%;
+  }
+}
 
-   .icon-checkbox input[type="checkbox"]:checked ~ .unchecked{
-       visibility: hidden;
-       opacity: 0;
-   }
+
+.heart-plein, .heart-vide{
+  position: absolute;
+  font-size: 1.5em;
+  cursor: pointer;
+  width: 33px;
+  margin-top: -15px;
+  color: #747474;
+  transition: all 1s linear;
+   
+  }
+  
+  .heart-plein {
+   background: $coeur-home-hover;
+   background: $coeur-home-gradient-hover;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   opacity: 0;
+}  
+
+.heart-plein:hover {
+   opacity: 1;
+}
+
+.heart-plein:focus {
+   opacity: 1;
+}
+
 
  // bouton des pages menu
 
@@ -131,7 +157,8 @@ input{
       .bouton-menu-2{
          @include bouton-menu;
          @include input-shadow;
-         animation: animation-menu 3000ms;
+         animation: animation-menu 2000ms;
+
 
          &:hover {
             @include input-shadow-hover;
@@ -152,7 +179,7 @@ input{
       .bouton-menu-3{
          @include bouton-menu;
          @include input-shadow;
-         animation: animation-menu 3500ms;
+         animation: animation-menu 2500ms;
 
          &:hover {
             @include input-shadow-hover;
@@ -173,7 +200,10 @@ input{
 
          @include bouton-menu;
          @include input-shadow;
-         animation: animation-menu 4000ms;
+         animation: animation-menu 3000ms;
+         @include large {
+            animation: animation-menu 1500ms;
+        }
 
          &:hover {
             @include input-shadow-hover;
@@ -194,7 +224,10 @@ input{
       .bouton-menu-5{
          @include bouton-menu;
          @include input-shadow;
-         animation: animation-menu 5500ms;
+         animation: animation-menu 3500ms;
+         @include large {
+            animation: animation-menu 2000ms;
+        }
 
          &:hover {
             @include input-shadow-hover;
@@ -215,7 +248,10 @@ input{
       .bouton-menu-6{
          @include bouton-menu;
          @include input-shadow;
-         animation: animation-menu 6000ms;
+         animation: animation-menu 4000ms;
+         @include large {
+            animation: animation-menu 2500ms;
+        }
 
          &:hover {
             @include input-shadow-hover;
@@ -236,7 +272,10 @@ input{
 
          @include bouton-menu;
          @include input-shadow;
-         animation: animation-menu 6500ms;
+         animation: animation-menu 4500ms;
+         @include large {
+            animation: animation-menu 1500ms;
+        }
 
          &:hover {
             @include input-shadow-hover;
@@ -257,7 +296,10 @@ input{
       .bouton-menu-8{
          @include bouton-menu;
          @include input-shadow;
-         animation: animation-menu 7000ms;
+         animation: animation-menu 5000ms;
+         @include large {
+            animation: animation-menu 2000ms;
+        }
 
          &:hover {
             @include input-shadow-hover;
@@ -278,7 +320,10 @@ input{
       .bouton-menu-9{
          @include bouton-menu;
          @include input-shadow;
-         animation: animation-menu 7500ms;
+         animation: animation-menu 5500ms;
+         @include large {
+            animation: animation-menu 2500ms;
+        }
 
          &:hover {
             @include input-shadow-hover;
@@ -301,7 +346,7 @@ input{
             margin-top: 30px;
                 }
          to { opacity:1;
-            margin-top: -10px;
+            margin-top: 15px;
              }
           }
 

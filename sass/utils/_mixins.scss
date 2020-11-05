@@ -1,19 +1,19 @@
 // ecran moyen
-@mixin sm {
+@mixin moyen {
     @media (min-width: #{$ecran-moyen}) {
         @content;
     }
  }
   
  // ecran large
- @mixin md {
+ @mixin large{
     @media (min-width: #{$ecran-large}) {
         @content;
     }
  }
-  
+
  // ecran extra-large
- @mixin lg {
+ @mixin extra-large{
     @media (min-width: #{$ecran-extra-large}) {
         @content;
     }
@@ -68,7 +68,7 @@ box-shadow:  0px 5px 12px -1px $input-shadow;
 
 @mixin bouton-menu{     
     margin: auto;
-    margin-top: -10px;
+    margin-top: 15px;
     width: 100%;
     height: 71px;
     background: white;
@@ -78,6 +78,21 @@ box-shadow:  0px 5px 12px -1px $input-shadow;
     overflow:hidden;
     cursor: pointer;
     border: none;
+
+    @include moyen {
+        margin-left: 100px;
+        width: 75%;
+    }
+
+    @include large {
+        margin-left: 50px;
+        width: 260px;
+    }
+
+    @include extra-large {
+        margin-left: 50px;
+        width: 320px;
+    }
  }
 
  @mixin bouton-menu-hover{     
@@ -96,6 +111,8 @@ box-shadow:  0px 5px 12px -1px $input-shadow;
 
 @mixin conteneur-flex-row{
     flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 

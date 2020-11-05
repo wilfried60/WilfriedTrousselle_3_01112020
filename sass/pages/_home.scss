@@ -46,7 +46,8 @@
 
      .conteneur_fonctionnement{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+       
 
         & h2{
             margin-top: 40px;
@@ -54,10 +55,16 @@
             font-weight: bold;
             font-size: 1.3em;
         }
+
+        article{
+            background: $fond-conteneur-home;
+            width: 100%;
+        }
     
         }
 
      .conteneur_block{
+         background-color: $couleur-header;
         @include conteneur-flex-column;
         
      }
@@ -92,44 +99,45 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        background: $fond-conteneur-home;
         margin-top: 20px;
+        @include moyen {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+       
+       
 
         & figure{
-            background-color:$couleur-body;
+            background-color:$couleur-header;
             width: 90%;
             height: 270px;
             margin: auto;
             margin-bottom: 20px;
-            overflow: hidden;
             border-radius: 15px;
              @include input-shadow;
 
-             &:nth-child(5){
-                margin-bottom: 50px;
+             @include moyen {
+               margin: 20px;
+               width: 320px;
             }
-            
-             & p{
-                 position: relative;
-                 font-size: 0.8em;
-                 padding: 5px;
-                 padding-left: 10px;
-                 padding-right: 10px;
-                 text-align:center;
-                 background: $couleur-tertiaire;
-                 margin-top: -312px;
-                 margin-bottom: 200px;
-                 margin-left: 58%;
-                 color: darken($couleur-tertiaire,35%);
-                 border-radius: 3px;
-                 
+
+            @include large {
+                margin: 20px;
+                width: 480px;
              }
+            
+
+             &:nth-child(4){
+                margin-bottom: 50px;
+            }            
 
             & img{
                 width: 100%;
                 height: 200px;
                 object-fit: cover;
                 opacity: 1;
+                border-radius: 15px 15px 0 0;
                 transition: opacity 600ms;
                 
             }
@@ -139,17 +147,21 @@
                 
             }
 
-            & figcaption{
-                padding: 10px;
-                font-weight: bold;
-                font-size: 0.9em;
-                color: $couleur-text;
-            }
-
             & h3{
+                color: $couleur-text;
                 margin-top:0;
                 margin-bottom: 5px;
                 font-size: 0.9em;
+
+                @include moyen {
+                    margin-left: 0px;
+                
+                }
+            
+                @include large {
+                    margin-left: 0px;
+                
+                }
             }
 
             & span{
@@ -160,7 +172,36 @@
         }   
     }   
    
-    
+    figcaption{
+        padding: 10px;
+        font-weight: bold;
+        font-size: 0.9em;
+        color: $couleur-text;
+
+      
+         & p{
+            position: relative;
+            font-size: 0.8em;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align:center;
+            background: $couleur-tertiaire;
+            margin-top: -222px;
+            margin-bottom: 200px;
+            margin-left: 58%;
+            color: darken($couleur-tertiaire,35%);
+            border-radius: 3px;
+            
+        }
+       }
+
+      
+
+
+
+
+
 
        
 

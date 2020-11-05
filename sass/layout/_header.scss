@@ -1,8 +1,9 @@
 /* section header */ 
 
 header{
+    background-color: $couleur-header;
     width: 100%;
-    height: 65px;
+    height: auto;
 
      h1{ 
         width: 150px;
