@@ -196,13 +196,14 @@ input:hover {
   font-size: 0.8em;
   color: #747474;
   font-weight: 400;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: all 1s;
 }
 .menu_bouton:hover p {
   width: calc(100% - 150px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu_bouton:hover .details {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
