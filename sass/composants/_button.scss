@@ -1,7 +1,7 @@
 
 /* bouton explorer et commander*/
 input{
-   margin: auto;
+   margin: auto; 
     max-width: 200px;
     width: 100%;
     height: 40px;
@@ -133,10 +133,10 @@ input{
 
  // bouton des pages menu
 
-      .bouton-menu-1{
+      .menu_bouton{
          @include bouton-menu;
          @include input-shadow;
-         animation: animation-menu 1500ms;
+         animation: animation-menu 2500ms;
 
          &:hover {
            @include input-shadow-hover;
@@ -152,195 +152,54 @@ input{
                @include bouton-menu-hover
                    
                 }
-      }
-
-      .bouton-menu-2{
-         @include bouton-menu;
-         @include input-shadow;
-         animation: animation-menu 2000ms;
-
-
-         &:hover {
-            @include input-shadow-hover;
-               
-            } 
-       
-            &:hover .fa-check-circle{
-             @include bouton-circle-hover
-                 
+               & .prix{
+                  font-size: 0.8em;
+                  height: 100%;
+                  margin-top: -35px;
+                  margin-bottom: 20px;
+                  font-weight: 600;
+                  float: right;
+                  margin-right: 10px;
+                  transition: margin-right 1s;  
               }
- 
-              &:hover .icone-check{
-                @include bouton-menu-hover
-                    
-                 }
+
+                & p{
+                  width: calc(100% - 60px);
+                  height: 100%;
+                  font-size: 0.9em;
+                  margin-top: 0;
+                  padding-top: 20px;
+                  font-weight: 600;
+                  padding-left: 10px;
+                  white-space:normal; 
+                  transition: all 1s;  
+               }
+
+               & .details{
+                 display: block;
+                 line-height: 2em;
+                 font-size: 0.8em;
+                 color: $couleur-p-home;
+                 font-weight: 400;
+                 white-space:nowrap;
+                 overflow: hidden;
+                 text-overflow: ellipsis; 
+                 transition: all 1s;
+               }
+
+               &:hover p{
+                  width: calc(100% - 150px);
+                  white-space:nowrap;
+                 overflow: hidden;
+                 text-overflow: ellipsis; 
+               }
+
+                   &:hover .prix{
+                     margin-right: 70px;          
+                      }
       }
 
-      .bouton-menu-3{
-         @include bouton-menu;
-         @include input-shadow;
-         animation: animation-menu 2500ms;
-
-         &:hover {
-            @include input-shadow-hover;
-               
-            } 
-       
-            &:hover .fa-check-circle{
-             @include bouton-circle-hover
-                 
-              }
- 
-              &:hover .icone-check{
-                @include bouton-menu-hover
-                    
-                 }
-      }
-      .bouton-menu-4{
-
-         @include bouton-menu;
-         @include input-shadow;
-         animation: animation-menu 3000ms;
-         @include large {
-            animation: animation-menu 1500ms;
-        }
-
-         &:hover {
-            @include input-shadow-hover;
-               
-            } 
-       
-            &:hover .fa-check-circle{
-             @include bouton-circle-hover
-                 
-              }
- 
-              &:hover .icone-check{
-                @include bouton-menu-hover
-                    
-                 }
-      }
-
-      .bouton-menu-5{
-         @include bouton-menu;
-         @include input-shadow;
-         animation: animation-menu 3500ms;
-         @include large {
-            animation: animation-menu 2000ms;
-        }
-
-         &:hover {
-            @include input-shadow-hover;
-               
-            } 
-       
-            &:hover .fa-check-circle{
-             @include bouton-circle-hover
-                 
-              }
- 
-              &:hover .icone-check{
-                @include bouton-menu-hover
-                    
-                 }
-      }
-
-      .bouton-menu-6{
-         @include bouton-menu;
-         @include input-shadow;
-         animation: animation-menu 4000ms;
-         @include large {
-            animation: animation-menu 2500ms;
-        }
-
-         &:hover {
-            @include input-shadow-hover;
-               
-            } 
-       
-            &:hover .fa-check-circle{
-             @include bouton-circle-hover
-                 
-              }
- 
-              &:hover .icone-check{
-                @include bouton-menu-hover
-                    
-                 }
-      }
-      .bouton-menu-7{
-
-         @include bouton-menu;
-         @include input-shadow;
-         animation: animation-menu 4500ms;
-         @include large {
-            animation: animation-menu 1500ms;
-        }
-
-         &:hover {
-            @include input-shadow-hover;
-               
-            } 
-       
-            &:hover .fa-check-circle{
-             @include bouton-circle-hover
-                 
-              }
- 
-              &:hover .icone-check{
-                @include bouton-menu-hover
-                    
-                 }
-      }
-
-      .bouton-menu-8{
-         @include bouton-menu;
-         @include input-shadow;
-         animation: animation-menu 5000ms;
-         @include large {
-            animation: animation-menu 2000ms;
-        }
-
-         &:hover {
-            @include input-shadow-hover;
-               
-            } 
-       
-            &:hover .fa-check-circle{
-             @include bouton-circle-hover
-                 
-              }
- 
-              &:hover .icone-check{
-                @include bouton-menu-hover
-                    
-                 }
-      }
-
-      .bouton-menu-9{
-         @include bouton-menu;
-         @include input-shadow;
-         animation: animation-menu 5500ms;
-         @include large {
-            animation: animation-menu 2500ms;
-        }
-
-         &:hover {
-            @include input-shadow-hover;
-               
-            } 
-       
-            &:hover .fa-check-circle{
-             @include bouton-circle-hover
-                 
-              }
- 
-              &:hover .icone-check{
-                @include bouton-menu-hover
-                    
-                 }
-      }
-
+      
       @keyframes animation-menu {
          from { opacity:0;
             margin-top: 30px;
@@ -350,28 +209,6 @@ input{
              }
           }
 
-          .icone-check{
-            width: 60px;
-            height: 71px;
-            border-radius: 0 10px 10px 0;
-            background: $couleur-tertiaire;
-            float: right;
-            color: white;
-            transition:all 600ms ;
-            margin-right: -60px;
-            transition: margin-right 1s;
-
-           & .fa-check-circle{
-               margin-top:7px;
-               padding:19px;
-               background: transparent;
-               font-size: 1.3em;
-               transform: rotate(90deg);
-               transition: transform 1s;
-              
-            }
-
-          }
 
         
 

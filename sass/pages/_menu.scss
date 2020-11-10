@@ -95,9 +95,32 @@ hr{
 
     @include large {
         margin-left: 50px;
-    
     }
 }
+
+.icone-check{
+    position: absolute;
+    height: 100%;
+    width: 60px;
+    border-radius: 0 10px 10px 0;
+    background: $couleur-tertiaire;
+    right: 0;
+    color: white;
+    transition:all 600ms ;
+    margin-right: -60px;
+    text-align: center;
+    transition: margin-right 1s;
+
+   & .fa-check-circle{
+      
+       margin-top:50%;
+       background: transparent;
+       font-size: 1.3em;
+       transform: rotate(90deg);
+       transition: transform 1s;
+      
+    }
+  }
 
 
 
