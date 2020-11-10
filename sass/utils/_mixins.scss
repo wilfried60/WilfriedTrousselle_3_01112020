@@ -47,9 +47,9 @@ box-shadow: 0px 5px 12px -1px $input-shadow;
 
 @mixin input-shadow-hover ($input-shadow:$fond-conteneur-home){
     @if (lightness($input-shadow) < 25%){
-       $input-shadow : lighten($input-shadow, 55%);
+       $input-shadow : lighten($input-shadow, 65%);
     }@else{
-        $input-shadow : darken($input-shadow, 35%);
+        $input-shadow : darken($input-shadow, 65%);
     }    
     -webkit-box-shadow:  0px 5px 12px -1px $input-shadow; 
 box-shadow:  0px 5px 12px -1px $input-shadow;
@@ -66,45 +66,18 @@ box-shadow:  0px 5px 12px -1px $input-shadow;
 
 // animation bouton page menu
 
-@mixin bouton-menu{ 
-    position: relative;
-    display: block;  
-    width: 100%; 
-    margin: auto;
-    margin-top: 15px;
-    height: auto;
-    background: white;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    animation-fill-mode: forwards;
-    overflow:hidden;
-    cursor: pointer;
-    border: none;
-
-    @include moyen {
-        margin-left: 100px;
-        width: 75%;
-    }
-
-    @include large {
-        margin-left: 0px;
-        margin: 20px;
-        width: 300px;
-    }
-
-    @include extra-large {
-        margin-left: 0px;
-        margin: 20px;
-        width: 320px;
-    }
- }
-
  @mixin bouton-menu-hover{     
     margin-right: 0;
  }
 
  @mixin bouton-circle-hover{     
     transform: rotate(360deg);
+ }
+
+ @mixin text-wrap{
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
  }
 
 // section flex 

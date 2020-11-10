@@ -26,9 +26,11 @@ input{
     }
  }
 
+ //*******************************************************
+
  /* bouton fonctionnement */
 
- .nav_fonctionnement{
+ .bouton_fonctionnement{
     margin-bottom: 20px;
     cursor: pointer;
 
@@ -82,6 +84,8 @@ input{
           
        }
  }
+
+ //*******************************************************
  
  // selection du coeur 
  
@@ -92,7 +96,7 @@ input{
    padding-right: 10px;
 }
 
-.icone-checkbox-menu{
+.block_menu_checkbox{
    width: 90%;
    text-align: right;
    margin-top: -30px;
@@ -101,6 +105,8 @@ input{
       width: 95%;
   }
 }
+
+//*****************************
 
 
 .heart-plein, .heart-vide{
@@ -130,13 +136,44 @@ input{
    opacity: 1;
 }
 
+//*****************************************************
 
  // bouton des pages menu
 
       .menu_bouton{
-         @include bouton-menu;
+    position: relative;
+    display: block;  
+    width: 100%; 
+    margin: auto;
+    margin-top: 15px;
+    height: auto;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    animation-fill-mode: forwards;
+    overflow:hidden;
+    cursor: pointer;
+    border: none;
+
+    @include moyen {
+        margin-left: 100px;
+        width: 75%;
+    }
+
+    @include large {
+        margin-left: 0px;
+        margin: 20px;
+        width: 300px;
+    }
+
+    @include extra-large {
+        margin-left: 0px;
+        margin: 20px;
+        width: 320px;
+    }
          @include input-shadow;
-         animation: animation-menu 2500ms;
+         -webkit-animation: animation-menu 2500ms;
+                 animation: animation-menu 2500ms;
 
          &:hover {
            @include input-shadow-hover;
@@ -185,15 +222,11 @@ input{
 
                &:hover p{
                   width: calc(100% - 150px);
-                  white-space:nowrap;
-                  overflow: hidden;
-                  text-overflow: ellipsis; 
+                 @include text-wrap;
                }
 
                &:hover .details{
-                  white-space:nowrap;
-                  overflow: hidden;
-                  text-overflow: ellipsis; 
+                  @include text-wrap;
                }
 
                    &:hover .prix{
@@ -201,6 +234,16 @@ input{
                       }
                       
       }
+
+      
+      @-webkit-keyframes animation-menu {
+         from { opacity:0;
+            margin-top: 30px;
+                }
+         to { opacity:1;
+            margin-top: 15px;
+             }
+          }
 
       
       @keyframes animation-menu {

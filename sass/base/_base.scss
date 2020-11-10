@@ -64,12 +64,13 @@ body{
     width: 100%;
     min-height: 100vh;
     background-color: $fond-conteneur-home;
-    animation: scrolle 5s;
+    -webkit-animation: scrolle 5s;
+            animation: scrolle 5s;
 
     @include large {
      max-width: 1440px;
      margin:auto;
-     }
+     } 
      
 }
 
@@ -92,8 +93,10 @@ main{
     position: absolute;
     width: 100%;
     height: 100vh;
-    animation: block-loader 5s ;
-    animation-fill-mode: forwards;
+    -webkit-animation: block-loader 5s ;
+            animation: block-loader 5s ;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     z-index: 99998;
     @include large {
         max-width: 1440px;
@@ -125,11 +128,23 @@ main{
         border-radius: 50%;
         width: 50px;
         height: 50px;
-        animation: loader 1s linear infinite;
+        -webkit-animation: loader 1s linear infinite;
+                animation: loader 1s linear infinite;
       
     }
 }
+ 
+     @-webkit-keyframes loader {
+         0% {
+             transform: rotate(0deg); 
+            }
+            100% {
+                transform: rotate(360deg);
+            }
 
+
+    }
+ 
      @keyframes loader {
          0% {
              transform: rotate(0deg); 
@@ -141,12 +156,24 @@ main{
 
     }
 
+    @-webkit-keyframes block-loader {
+        from {visibility: visible;
+               opacity:1}
+        to {visibility: hidden;
+            opacity:0}
+         }
+
     @keyframes block-loader {
         from {visibility: visible;
                opacity:1}
         to {visibility: hidden;
             opacity:0}
          }
+
+         @-webkit-keyframes scrolle {
+            from {overflow: hidden;}
+            to {overflow: scroll;}
+             }
 
          @keyframes scrolle {
             from {overflow: hidden;}

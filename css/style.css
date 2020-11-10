@@ -23,16 +23,16 @@ input {
 }
 input:hover {
   opacity: 0.8;
-  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
-  box-shadow: 0px 5px 12px -1px #9d9d9d;
+  -webkit-box-shadow: 0px 5px 12px -1px #505050;
+  box-shadow: 0px 5px 12px -1px #505050;
 }
 
 /* bouton fonctionnement */
-.nav_fonctionnement {
+.bouton_fonctionnement {
   margin-bottom: 20px;
   cursor: pointer;
 }
-.nav_fonctionnement ul {
+.bouton_fonctionnement ul {
   position: relative;
   bottom: 0px;
   margin: 0 auto;
@@ -40,7 +40,7 @@ input:hover {
   padding-left: 30px;
   padding-top: 0px;
 }
-.nav_fonctionnement li {
+.bouton_fonctionnement li {
   color: black;
   font-size: 0.8em;
   font-weight: bold;
@@ -56,7 +56,7 @@ input:hover {
   transition: all 1000ms;
 }
 @media (min-width: 1080px) {
-  .nav_fonctionnement li {
+  .bouton_fonctionnement li {
     margin-right: 50px;
     max-width: 260px;
     width: 100%;
@@ -64,16 +64,16 @@ input:hover {
     display: inline-block;
   }
 }
-.nav_fonctionnement li .fa-mobile-alt, .nav_fonctionnement li .fa-list, .nav_fonctionnement li .fa-store {
+.bouton_fonctionnement li .fa-mobile-alt, .bouton_fonctionnement li .fa-list, .bouton_fonctionnement li .fa-store {
   padding-top: 20px;
   color: #747474;
   transition: all 600ms;
 }
-.nav_fonctionnement li:hover {
+.bouton_fonctionnement li:hover {
   background: #f2eafb;
   color: #9356DC;
 }
-.nav_fonctionnement li:hover .fa-mobile-alt, .nav_fonctionnement li:hover .fa-list, .nav_fonctionnement li:hover .fa-store {
+.bouton_fonctionnement li:hover .fa-mobile-alt, .bouton_fonctionnement li:hover .fa-list, .bouton_fonctionnement li:hover .fa-store {
   color: #9356DC;
 }
 
@@ -84,13 +84,13 @@ input:hover {
   padding-right: 10px;
 }
 
-.icone-checkbox-menu {
+.block_menu_checkbox {
   width: 90%;
   text-align: right;
   margin-top: -30px;
 }
 @media (min-width: 750px) {
-  .icone-checkbox-menu {
+  .block_menu_checkbox {
     width: 95%;
   }
 }
@@ -137,6 +137,7 @@ input:hover {
   border: none;
   -webkit-box-shadow: 0px 5px 12px -1px #b6b6b6;
   box-shadow: 0px 5px 12px -1px #b6b6b6;
+  -webkit-animation: animation-menu 2500ms;
   animation: animation-menu 2500ms;
 }
 @media (min-width: 750px) {
@@ -160,8 +161,8 @@ input:hover {
   }
 }
 .menu_bouton:hover {
-  -webkit-box-shadow: 0px 5px 12px -1px #9d9d9d;
-  box-shadow: 0px 5px 12px -1px #9d9d9d;
+  -webkit-box-shadow: 0px 5px 12px -1px #505050;
+  box-shadow: 0px 5px 12px -1px #505050;
 }
 .menu_bouton:hover .fa-check-circle {
   transform: rotate(360deg);
@@ -212,6 +213,16 @@ input:hover {
   margin-right: 70px;
 }
 
+@-webkit-keyframes animation-menu {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 15px;
+  }
+}
 @keyframes animation-menu {
   from {
     opacity: 0;
@@ -274,6 +285,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: #f6f6f6;
+  -webkit-animation: scrolle 5s;
   animation: scrolle 5s;
 }
 @media (min-width: 1080px) {
@@ -299,7 +311,9 @@ main {
   position: absolute;
   width: 100%;
   height: 100vh;
+  -webkit-animation: block-loader 5s;
   animation: block-loader 5s;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   z-index: 99998;
 }
@@ -332,15 +346,34 @@ main {
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  -webkit-animation: loader 1s linear infinite;
   animation: loader 1s linear infinite;
 }
 
+@-webkit-keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes loader {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes block-loader {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
   }
 }
 @keyframes block-loader {
@@ -351,6 +384,14 @@ main {
   to {
     visibility: hidden;
     opacity: 0;
+  }
+}
+@-webkit-keyframes scrolle {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: scroll;
   }
 }
 @keyframes scrolle {
@@ -417,29 +458,29 @@ header h1 {
   margin-top: 40px;
 }
 
-.block_localisation {
+.conteneur_localisation {
   height: 40px;
   line-height: 2.5;
   background: #e9e9e9;
   -webkit-box-shadow: inset 0px 10px 9px -10px #c3c3c3;
   box-shadow: inset 0px 10px 9px -10px #c3c3c3;
 }
-.block_localisation i {
+.conteneur_localisation i {
   padding-right: 10px;
 }
 
 /* section conteneur fonctionnement*/
-.conteneur_fonctionnement {
+.conteneur_flex {
   display: flex;
   flex-direction: column;
 }
-.conteneur_fonctionnement h2 {
+.conteneur_flex h2 {
   margin-top: 40px;
   margin-left: 20px;
   font-weight: bold;
   font-size: 1.3em;
 }
-.conteneur_fonctionnement article {
+.conteneur_flex article {
   background: #f6f6f6;
   width: 100%;
 }
@@ -473,20 +514,20 @@ header h1 {
 }
 
 /* section article restaurants */
-.image-box {
+.image_box {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
 }
 @media (min-width: 750px) {
-  .image-box {
+  .image_box {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
 }
-.image-box figure {
+.image_box figure {
   background-color: white;
   width: 90%;
   height: 270px;
@@ -497,48 +538,49 @@ header h1 {
   box-shadow: 0px 5px 12px -1px #b6b6b6;
 }
 @media (min-width: 750px) {
-  .image-box figure {
+  .image_box figure {
     margin: 20px;
     width: 320px;
   }
 }
 @media (min-width: 1080px) {
-  .image-box figure {
+  .image_box figure {
     margin: 20px;
     width: 480px;
   }
 }
-.image-box figure:nth-child(4) {
+.image_box figure:nth-child(4) {
   margin-bottom: 50px;
 }
-.image-box figure img {
+.image_box figure img {
   width: 100%;
   height: 200px;
+  -o-object-fit: cover;
   object-fit: cover;
   opacity: 1;
   border-radius: 15px 15px 0 0;
   transition: opacity 600ms;
 }
-.image-box figure img:hover {
+.image_box figure img:hover {
   opacity: 0.6;
 }
-.image-box figure h3 {
+.image_box figure h3 {
   color: black;
   margin-top: 0;
   margin-bottom: 5px;
   font-size: 0.9em;
 }
 @media (min-width: 750px) {
-  .image-box figure h3 {
+  .image_box figure h3 {
     margin-left: 0px;
   }
 }
 @media (min-width: 1080px) {
-  .image-box figure h3 {
+  .image_box figure h3 {
     margin-left: 0px;
   }
 }
-.image-box figure span {
+.image_box figure span {
   position: absolute;
   color: #747474;
   font-weight: normal;
@@ -577,6 +619,7 @@ figcaption p {
 .figure-menu img {
   width: 100%;
   height: 200px;
+  -o-object-fit: cover;
   object-fit: cover;
   opacity: 1;
   transition: opacity 600ms;
@@ -611,6 +654,10 @@ figcaption p {
   border-radius: 30px 30px 0 0;
   padding: 15px;
 }
+.block_menu_titre {
+  overflow: hidden;
+  height: 30px;
+}
 .block_menu h2 {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.3em;
@@ -632,7 +679,7 @@ h3 {
   }
 }
 
-.block-titre {
+.block_menu_titre {
   width: 100%;
   overflow: hidden;
   height: 30px;
